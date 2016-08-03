@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/connect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app="">
+
+<nav class="w3-leftsidenav w3-sidenav w3-white" style="display:none" id="leftSideNav">
+    <header class="w3-container w3-teal">
+        <span class="title" style="margin-left: 40px"> Connect </span>
+        <span onclick="left_close()" class="w3-closenav"
+              style="float: right;margin-right: 10px;margin-left: 10px;"> &times;</span>
+    </header>
+    left
+</nav>
+
+<nav class="w3-sidenav w3-collapse w3-white" style="right:0" id="rightSideNav">
+    <header class="w3-container w3-teal">
+        <span onclick="right_close()" class="w3-closenav"
+              style="float: left;margin-left: 10px;margin-right: 10px;"> &times;</span>
+        <span class="title" style="margin-right: 40px"> Connect </span>
+    </header>
+right
+</nav>
+
+<div class="w3-main" style="margin-left:200px">
+    <header class="w3-container w3-teal">
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="left_open()">&#9776;</span>
+        <span class="title"> Connect </span>
+        <span class="w3-opennav w3-xlarge w3-hide-large" style="float: right;"
+              onclick="right_open()">&#9733;</span>
+    </header>
+
+</div>
+
+
+<script src="lib/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+<script>
+    function right_close() {
+        document.getElementById("rightSideNav").style.display = "none";
+    }
+    function right_open() {
+        document.getElementById("rightSideNav").style.width = "100%";
+        document.getElementById("rightSideNav").style.display = "block";
+    }
+    function left_open() {
+        document.getElementById("leftSideNav").style.width = "100%";
+        document.getElementById("leftSideNav").style.display = "block";
+    }
+    function left_close() {
+        document.getElementById("leftSideNav").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
